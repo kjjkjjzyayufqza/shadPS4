@@ -59,11 +59,14 @@ Preserve these architectural rules from `CONTRIBUTING.md`:
    state, elapsed time, and exact liveness or failure signal.
 3. Trace the narrowest authoritative path from the guest API through the emulated subsystem. Check
    data ownership, queue state, synchronization, and protocol invariants before changing behavior.
-4. Test one causal hypothesis at a time. Instrument only the state needed to prove or disprove it,
+4. Search upstream issues, pull requests, commits, and relevant forks for existing investigations or
+   fixes before implementing a new solution. Reuse sound prior work when its hardware semantics,
+   license, and regression risk fit this codebase; record why any similar approach is insufficient.
+5. Test one causal hypothesis at a time. Instrument only the state needed to prove or disprove it,
    and revert falsified experiments completely.
-5. Implement the smallest general fix that preserves the real protocol semantics. Add comments for
+6. Implement the smallest general fix that preserves the real protocol semantics. Add comments for
    non-obvious invariants and reasons, not line-by-line narration.
-6. Verify formatting, build, tests, runtime behavior, and the final diff. Remove temporary logs,
+7. Verify formatting, build, tests, runtime behavior, and the final diff. Remove temporary logs,
    debugger scripts, probes, and title-specific instrumentation before handing off.
 
 Do not infer a root cause from the severity or color of a log message. Repeated stub or unsupported
