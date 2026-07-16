@@ -11,6 +11,10 @@ This document covers information about debugging, troubleshooting and reporting 
 
 This section will guide you through setting up tools for debugging the emulator. This list will likely expand as more tools and platforms receive consistent setups.
 
+For Windows Vulkan frame captures, see [Capturing shadPS4 with RenderDoc](renderdoc.md).
+The current GVS graphics research checkpoint is recorded in
+[GVS graphics investigation TODO](gvs-graphics-todo.md).
+
 <details>
 <summary>Linux</summary>
 
